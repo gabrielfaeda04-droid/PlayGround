@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <title>ANTHILL: Forage</title>
+  <meta name="theme-color" content="#71805a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <div class="brand"><span class="brand-mark">●</span><div><b>ANTHILL</b><small>FORAGE RUN</small></div></div>
+    <div class="hud-cards">
+      <div class="card"><span>LEAVES</span><strong id="score">0 / 12</strong></div>
+      <div class="card"><span>ENERGY</span><div class="meter"><i id="energy"></i></div></div>
+    </div>
+  </div>
+
+  <div id="objective" class="objective"><span>◈</span><div><small>COLONY NEEDS</small><strong id="objectiveText">Gather 12 leaves</strong></div></div>
+
+  <div id="start" class="overlay visible">
+    <div class="panel">
+      <div class="eyebrow">COLONY 742 · DAWN SHIFT</div>
+      <h1>ANT<span>HILL</span></h1>
+      <p>Gather enough leaves before the beetles find you.</p>
+      <div class="keys"><div><kbd>WASD</kbd><small>MOVE</small></div><div><kbd>SHIFT</kbd><small>DASH</small></div><div><kbd>E</kbd><small>LIFT</small></div></div>
+      <button id="startBtn">BEGIN FORAGE <b>→</b></button>
+    </div>
+  </div>
+
+  <div id="end" class="overlay">
+    <div class="panel end-panel">
+      <div id="endEyebrow" class="eyebrow">COLONY FED</div>
+      <h2 id="endTitle">SHIFT COMPLETE</h2>
+      <p id="endText">The workers carry a record haul.</p>
+      <button id="restartBtn">FORAGE AGAIN <b>↻</b></button>
+    </div>
+  </div>
+
+  <div id="touch" aria-label="Touch controls">
+    <div id="stick"><i></i></div>
+    <button id="liftBtn">LIFT</button>
+    <button id="dashBtn">DASH</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
